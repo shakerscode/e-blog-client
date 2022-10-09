@@ -1,16 +1,15 @@
 import React, { useState } from 'react'; 
 import { IoCloseCircleOutline } from 'react-icons/io5'
- import { BsJustifyLeft, BsSearch } from 'react-icons/bs'
- import { Link } from 'react-router-dom';
+ import { BsJustifyLeft } from 'react-icons/bs' 
 
 const Header = () => { 
-    const [open, setOpen] = useState(false) 
+    const [open, setOpen] = useState(false)  
     const menus = [
         { m: 'Home', link: '/' },
-        { m: 'Shop', link: '/shop' },
-        { m: 'Blog', link: '/blog' },
-        { m: 'Contact', link: '/' },
-        { m: 'About', link: '/' },
+        { m: 'Our Shop', link: 'https://expansionmart.netlify.app/shop' },
+        { m: 'Policy', link: 'https://expansionmart.netlify.app/policy' },
+        { m: 'Contact', link: 'https://expansionmart.netlify.app/contact' },
+        { m: 'About', link: 'https://expansionmart.netlify.app/about' },
     ]
    
 
@@ -42,9 +41,13 @@ const Header = () => {
                             {
                                 menus.map((menu, i) =>
                                     <li
-                                        key={i}
-                                        // onClick={() => navigate(`${menu.link}`)}
-                                        className='text-md md:text-lg cursor-pointer hover:text-secondary transition-all ease-in duration-150 text-[20px]'><Link to={menu?.link}>{menu?.m}</Link></li>)
+                                        key={i} 
+                                        className='text-md md:text-lg cursor-pointer hover:text-secondary transition-all ease-in duration-150 text-[20px]'>
+                                            <a 
+                                            target={`${menu?.m === 'Shop' || menu?.m === 'Policy' || menu?.m === 'Contact'|| menu?.m === 'About' ? "_blank" : ""}`} 
+                                            href={menu?.link}>{menu?.m}</a>
+                                            
+                                            </li>)
                             }
                         </ul>
                     

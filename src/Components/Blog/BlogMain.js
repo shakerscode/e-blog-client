@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { BlogPostBox, NewsLetter, Ads } from '../exporter';
+import { BlogPostBox, Ads } from '../exporter';
 import Author from '../../assets/AboutMe/shaker-ahamed.jpg'
 import { BsFacebook, BsInstagram } from 'react-icons/bs';
 import { AiFillTwitterCircle } from 'react-icons/ai';
@@ -8,6 +8,7 @@ import { FaYoutube } from 'react-icons/fa';
 import squireAdsOne from '../../assets/Ads/squireAds-1.png'
 import squireAdsTwo from '../../assets/Ads/squireAds-2.png'
 import bannerAdsThree from '../../assets/Ads/bannerAds-3.png'
+import NewsLetter from './NewsLetter';
 
 
 const BlogMain = () => {
@@ -26,7 +27,7 @@ const BlogMain = () => {
                     {
                         blogs?.map((blog, i) => <BlogPostBox key={i} blog={blog} />)
                     }
-                    <div className='flex flex-wrap justify-center items-center gap-3'>
+                    <div className='flex flex-wrap justify-center items-center gap-3 py-5'>
                         <button className='pagination-btn'>Previous</button>
                         <span className='pagination-btn'>1</span>
                         <span className='pagination-btn'>2</span>
@@ -93,8 +94,8 @@ const BlogMain = () => {
                     </div>
                 </aside>
             </div>
+            <NewsLetter />
             <Ads url={bannerAdsThree} />
-            {/* <NewsLetter /> */}
         </main>
     );
 };
