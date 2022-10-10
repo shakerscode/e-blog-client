@@ -44,7 +44,7 @@ const Header = () => {
                                         key={i} 
                                         className='text-md md:text-lg cursor-pointer hover:text-secondary transition-all ease-in duration-150 text-[20px]'>
                                             <a 
-                                            target={`${menu?.m === 'Shop' || menu?.m === 'Policy' || menu?.m === 'Contact'|| menu?.m === 'About' ? "_blank" : ""}`} 
+                                            target={`${menu?.m === 'Our Shop' || menu?.m === 'Policy' || menu?.m === 'Contact'|| menu?.m === 'About' ? "_blank" : ""}`} 
                                             href={menu?.link}>{menu?.m}</a>
                                             
                                             </li>)
