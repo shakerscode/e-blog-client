@@ -24,8 +24,7 @@ const Blog = () => {
             <Ads url={bannerAdsTwo}/>
             <Blogs blogs={blogs}/>
             <Ads url={bannerAdsOne}/>
-            <BlogMain/>
-            
+            <BlogMain/> 
         </section>
     );
 };

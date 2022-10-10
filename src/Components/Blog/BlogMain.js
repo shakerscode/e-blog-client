@@ -12,12 +12,13 @@ import NewsLetter from './NewsLetter';
 
 
 const BlogMain = () => {
-    const [blogs, setBlogs] = useState([]) 
+    const [blogs, setBlogs] = useState([])  
+    
     useEffect(() => {
         fetch('blogs.json')
             .then(res => res.json())
             .then(data => setBlogs(data))
-    }, [blogs.json])
+    }, [])
 
     return (
         <main className='my-5'>
@@ -25,7 +26,7 @@ const BlogMain = () => {
                 <div className='col-span-2'>
                     <h1 className='md:text-3xl text-xl font-bold text-primary border-b pb-3'>Latest Blogs</h1>
                     {
-                        blogs?.map((blog, i) => <BlogPostBox key={i} blog={blog} />)
+                        blogs.map((blog, i) => <BlogPostBox key={i} blog={blog} />)
                     }
                     <div className='flex flex-wrap justify-center items-center gap-3 py-5'>
                         <button className='pagination-btn'>Previous</button>

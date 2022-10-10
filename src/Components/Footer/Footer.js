@@ -54,20 +54,7 @@ const Footer = () => {
 
 
     return (
-        <footer className='bg-light h-fit-content md:px-14 px-3'>
-            <div className='grid md:grid-cols-2 gap-5 mx-auto py-8 border-b border-dashed border-gray'>
-                {
-                    itemsInFooter?.map((I, i) =>
-                        <div
-                            className='flex justify-start items-center gap-4'
-                            key={i}>
-                            <img src={I.image} alt="" className='p-2 rounded-full border border-secondary w-10' />
-                            <p className=''>{I.tittle}</p>
-                        </div>
-                    )
-                }
-
-            </div>
+        <footer className='bg-light h-fit-content md:px-14 px-3'> 
             <div className='grid grid-cols-1 md:grid-cols-5 gap-3 border-b border-dashed border-gray py-10'>
                 <div>
                     <h1 className='md:text-4xl text-2xl font-bold text-primary'>Expansion<span className='text-secondary'>Mart</span></h1>
